@@ -23,6 +23,27 @@ Nulla sint consequat eu minim adipisicing duis consequat ex proident dolor.&lt;/
 Laborum voluptate magna sunt deserunt veniam minim irure ipsum.
 Commodo excepteur voluptate sit nostrud duis officia proident commodo.&lt;/p&gt;
 
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// fittext.js plugin
+          (function($){
+            $.fn.fitText = function(kompressor, options){
+              var compressor = kompressor || 1,
+                  settings = $.extend({
+                    &#39;minFontSize&#39; : Number.NEGATIVE_INFINITY,
+                    &#39;maxFontSize&#39; : Number.POSITIVE_INFINITY
+                  }, options);
+            
+              return this.each(function(){
+                var $this = $(this);
+                var resizer = function () {
+                  $this.css(&#39;font-size&#39;, Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+                };
+                resizer();
+                $(window).on(&#39;resize orientationchange&#39;, resizer);
+              });
+            };
+          })( jQuery ); 
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;The only problem is that the person he recommended didn’t know how to code. We did the interview, his personality matched with our values, and so we decided to give him a shot.&lt;/p&gt;
 
 &lt;p&gt;Adipisicing aliqua do laborum esse eu duis ullamco velit ad commodo quis eu cillum exercitation.

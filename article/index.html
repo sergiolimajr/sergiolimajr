@@ -36,6 +36,10 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
     </head>
 
 <body>
@@ -76,7 +80,7 @@
     </header>
     
     <section class="post-excerpt">
-        <p>Est velit deserunt nulla minim nostrud minim velit ullamco qui aute duis. Aute do Lorem officia anim mollit minim enim mollit. Ut nisi minim deserunt aliqua ex nostrud. Nulla sint consequat eu minim adipisicing duis consequat ex proident dolor. Aute nisi ex adipisicing dolore elit laborum nisi id ut duis non ipsum. Laborum voluptate magna sunt deserunt veniam minim irure ipsum. Commodo excepteur voluptate sit nostrud duis officia proident commodo. The only problem is that the person he recommended didn’t know how to code.</p>
+        <p>Est velit deserunt nulla minim nostrud minim velit ullamco qui aute duis. Aute do Lorem officia anim mollit minim enim mollit. Ut nisi minim deserunt aliqua ex nostrud. Nulla sint consequat eu minim adipisicing duis consequat ex proident dolor. Aute nisi ex adipisicing dolore elit laborum nisi id ut duis non ipsum. Laborum voluptate magna sunt deserunt veniam minim irure ipsum. Commodo excepteur voluptate sit nostrud duis officia proident commodo. // fittext.js plugin (function($){ $.fn.fitText = function(kompressor, options){ var compressor = kompressor || 1, settings = $.extend({ 'minFontSize' : Number.NEGATIVE_INFINITY, 'maxFontSize' : Number.POSITIVE_INFINITY }, options); return this.each(function(){ var $this = $(this); var resizer = function () { $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize))); }; resizer(); $(window).on('resize orientationchange', resizer); }); }; })( jQuery ); The only problem is that the person he recommended didn’t know how to code.</p>
     </section>
 
     <footer class="post-footer">

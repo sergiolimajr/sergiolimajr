@@ -543,7 +543,7 @@ body:after {
 
 .container .title-container {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     color: #cecece;
     padding: 30px 0 0 0;
 }
@@ -553,7 +553,7 @@ body:after {
     margin-left: 0;
     margin-bottom: 0;
     padding-left: 0;
-    *zoom: 1;
+    *zoom: 1
 }
 
 .nav:before,
