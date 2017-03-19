@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on Sérgio Júnior</title>
+    <link>/article/</link>
+    <description>Recent content in Articles on Sérgio Júnior</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Mar 2017 00:47:00 -0300</lastBuildDate>
+    <atom:link href="/article/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Array em JavaScript</title>
+      <link>/article/arrayjs/</link>
+      <pubDate>Sun, 19 Mar 2017 00:47:00 -0300</pubDate>
+      
+      <guid>/article/arrayjs/</guid>
+      <description>&lt;p&gt;A API de array em JavaScript e muito rica.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>/article/Welcome/</link>
+      <pubDate>Mon, 27 Feb 2017 11:09:28 -0300</pubDate>
+      
+      <guid>/article/Welcome/</guid>
+      <description>&lt;p&gt;Est velit deserunt nulla minim nostrud minim velit ullamco qui aute duis.
+Aute do Lorem officia anim mollit minim enim mollit. Ut nisi minim deserunt aliqua ex nostrud.
+Nulla sint consequat eu minim adipisicing duis consequat ex proident dolor.&lt;/p&gt;
+
+&lt;p&gt;Aute nisi ex adipisicing dolore elit laborum nisi id ut duis non ipsum.
+Laborum voluptate magna sunt deserunt veniam minim irure ipsum.
+Commodo excepteur voluptate sit nostrud duis officia proident commodo.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// fittext.js plugin
+          (function($){
+            $.fn.fitText = function(kompressor, options){
+              var compressor = kompressor || 1,
+                  settings = $.extend({
+                    &#39;minFontSize&#39; : Number.NEGATIVE_INFINITY,
+                    &#39;maxFontSize&#39; : Number.POSITIVE_INFINITY
+                  }, options);
+            
+              return this.each(function(){
+                var $this = $(this);
+                var resizer = function () {
+                  $this.css(&#39;font-size&#39;, Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+                };
+                resizer();
+                $(window).on(&#39;resize orientationchange&#39;, resizer);
+              });
+            };
+          })( jQuery ); 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only problem is that the person he recommended didn’t know how to code. We did the interview, his personality matched with our values, and so we decided to give him a shot.&lt;/p&gt;
+
+&lt;p&gt;Adipisicing aliqua do laborum esse eu duis ullamco velit ad commodo quis eu cillum exercitation.
+Qui consectetur eiusmod ex laboris laboris eu eiusmod enim tempor id ex ullamco.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
