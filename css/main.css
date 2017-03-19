@@ -898,6 +898,12 @@ hr {
     overflow: hidden;
 }
 
+@media (max-width: 800px) {
+    #site-header .heading {
+        font-size: 45px !important;
+    }
+}
+
 .logo {
     color: #3b3b3b;
     font-weight: 700;
