@@ -28,9 +28,10 @@ Isso ajuda muito no controle do que está sendo feito no projeto, então decidi 
 
 &lt;p&gt;Se quiséssemos ver algumas interações, poderíamos usar &lt;em&gt;$ git log -p -2&lt;/em&gt;, trazendo assim os dois ultimos commits, ou quantos você desejar.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt; 
+
 commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
-Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Author: jorgebuxe &lt;email@email.com&gt;
 Date:   Mon Mar 27 00:03:30 2017 -0300
 
     Alterando o arquivo.txt
@@ -44,7 +45,7 @@ index 980a0d5..f534deb 100644
 +Hello World.
 
 commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
-Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Author: jorgebuxe &lt;email@email.com&gt;
 Date:   Sun Mar 26 23:57:28 2017 -0300
 
     Meu primeiro commit
@@ -61,9 +62,10 @@ index 0000000..980a0d5
 
 &lt;p&gt;Outra coisa que você também pode fazer é usar o &lt;em&gt;$ git log - -stat&lt;/em&gt;. Esse comando mostra um resumo estatístico de todos os commits, dizendo quantas linhas foram alterados, quantas foram retiradas e quantas foram adicionadas, simples não é?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;
+
 commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
-Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Author: jorgebuxe &lt;email@email.com&gt;
 Date:   Mon Mar 27 00:03:30 2017 -0300
 
     Alterando o arquivo.txt
@@ -75,13 +77,15 @@ Date:   Mon Mar 27 00:03:30 2017 -0300
 
 &lt;p&gt;Já quando não queremos ver todo esse emaranhado de código, usamos o comando &lt;em&gt;$ git log - -pretty=oneline&lt;/em&gt;. Ele retornará tudo numa linha, porém, retirando alguns detalhes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;c192eb18ed3de7888de93bdde938e0bac1c7d55d Alterando o arquivo.txt
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;
+c192eb18ed3de7888de93bdde938e0bac1c7d55d Alterando o arquivo.txt
 6b9bd6ff28443c98e10f49191862811fce47ea8e Meu primeiro commit
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Também existe uma outra opção do (- -pretty), que é o (- -pretty=format) seguido do formato que queremos. Usando o comando &lt;em&gt;$ git log - -pretty=format:&amp;ldquo;%h - %an, %ar : %s&amp;rdquo;&lt;/em&gt; ele traz os commits formatados como desejamos deixando tudo bem organizado pelo hash, quem commitou, há quanto tempo commitou, e qual é a descrição do commit.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;   %h         %an          %ar                    %s
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;
+   %h         %an          %ar                    %s
 -------   ---------  ----------------   -----------------------
 c192eb1 - jorgebuxe, 84 minutos atrás : Alterando o arquivo.txt
 6b9bd6f - jorgebuxe, 2 horas atrás : Meu primeiro commit
@@ -89,17 +93,54 @@ c192eb1 - jorgebuxe, 84 minutos atrás : Alterando o arquivo.txt
 
 &lt;p&gt;Podemos ainda pegar o log dos commits feitos há dias atras, tanto como minutos, horas. Usando comando &lt;em&gt;$ git log - -sice=2.days&lt;/em&gt; ou &lt;em&gt;$ git log - -since=120.minutes&lt;/em&gt; que equivale a 2 horas.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
-Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;
+commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe &lt;email@email.com&gt;
 Date:   Mon Mar 27 00:03:30 2017 -0300
 
     Alterando o arquivo.txt
 
 commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
-Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Author: jorgebuxe &lt;email@email.com&gt;
 Date:   Sun Mar 26 23:57:28 2017 -0300
 
     Meu primeiro commit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;ruby&#34;&gt;
+# Output &#34;Eu gosto de ruby&#34;
+diz = &#34;Eu gosto de Ruby&#34;
+puts diz
+
+# Saída &#34;EU *GOSTO* DE RUBY&#34;
+diz[&#39;gosto&#39;] = &#34;*gosto*&#34;
+puts diz.upcase
+
+# Output: &#34;Eu *gosto*
+# de Ruby&#34; 5 vezes
+5.times { puts diz }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;
+// fittext.js plugin
+          (function($){
+            $.fn.fitText = function(kompressor, options){
+              var compressor = kompressor || 1,
+                  settings = $.extend({
+                    &#39;minFontSize&#39; : Number.NEGATIVE_INFINITY,
+                    &#39;maxFontSize&#39; : Number.POSITIVE_INFINITY
+                  }, options);
+            
+              return this.each(function(){
+                var $this = $(this);
+                var resizer = function () {
+                  $this.css(&#39;font-size&#39;, Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+                };
+                resizer();
+                $(window).on(&#39;resize orientationchange&#39;, resizer);
+              });
+            };
+          })( jQuery ); 
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;conclusão:a318d8452666fd7e352d1ffc18b687ee&#34;&gt;Conclusão&lt;/h3&gt;

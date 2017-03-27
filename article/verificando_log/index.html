@@ -4,8 +4,8 @@
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
-    <head>
-                <meta charset="utf-8">
+<head>
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
@@ -30,19 +30,19 @@
         <meta property="og:article:published_time" content="2017-03-27T00:36:27-03:00" />
     
         <meta name="generator" content="Hugo 0.16-DEV" />
-        <title>Formas de verificar o log no Git &middot; Sérgio Júnior</title>
-        <link rel="canonical" href="/" />
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
-        <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-    </head>
+    <title>Formas de verificar o log no Git &middot; Sérgio Júnior</title>
+    <link rel="canonical" href="/" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+   
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/dracula.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
 
 <body>
 <!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
@@ -89,9 +89,10 @@ Isso ajuda muito no controle do que está sendo feito no projeto, então decidi 
 
 <p>Se quiséssemos ver algumas interações, poderíamos usar <em>$ git log -p -2</em>, trazendo assim os dois ultimos commits, ou quantos você desejar.</p>
 
-<pre><code class="language-ruby">
+<pre><code class="bash"> 
+
 commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
-Author: jorgebuxe &lt;email@email.com&gt;
+Author: jorgebuxe <email@email.com>
 Date:   Mon Mar 27 00:03:30 2017 -0300
 
     Alterando o arquivo.txt
@@ -105,7 +106,7 @@ index 980a0d5..f534deb 100644
 +Hello World.
 
 commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
-Author: jorgebuxe &lt;email@email.com&gt;
+Author: jorgebuxe <email@email.com>
 Date:   Sun Mar 26 23:57:28 2017 -0300
 
     Meu primeiro commit
@@ -122,9 +123,10 @@ index 0000000..980a0d5
 
 <p>Outra coisa que você também pode fazer é usar o <em>$ git log - -stat</em>. Esse comando mostra um resumo estatístico de todos os commits, dizendo quantas linhas foram alterados, quantas foram retiradas e quantas foram adicionadas, simples não é?</p>
 
-<pre><code class="language-ruby">
+<pre><code class="bash">
+
 commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
-Author: jorgebuxe &lt;email@email.com&gt;
+Author: jorgebuxe <email@email.com>
 Date:   Mon Mar 27 00:03:30 2017 -0300
 
     Alterando o arquivo.txt
@@ -136,13 +138,15 @@ Date:   Mon Mar 27 00:03:30 2017 -0300
 
 <p>Já quando não queremos ver todo esse emaranhado de código, usamos o comando <em>$ git log - -pretty=oneline</em>. Ele retornará tudo numa linha, porém, retirando alguns detalhes.</p>
 
-<pre><code class="language-ruby">c192eb18ed3de7888de93bdde938e0bac1c7d55d Alterando o arquivo.txt
+<pre><code class="bash">
+c192eb18ed3de7888de93bdde938e0bac1c7d55d Alterando o arquivo.txt
 6b9bd6ff28443c98e10f49191862811fce47ea8e Meu primeiro commit
 </code></pre>
 
 <p>Também existe uma outra opção do (- -pretty), que é o (- -pretty=format) seguido do formato que queremos. Usando o comando <em>$ git log - -pretty=format:&ldquo;%h - %an, %ar : %s&rdquo;</em> ele traz os commits formatados como desejamos deixando tudo bem organizado pelo hash, quem commitou, há quanto tempo commitou, e qual é a descrição do commit.</p>
 
-<pre><code class="language-ruby">   %h         %an          %ar                    %s
+<pre><code class="bash">
+   %h         %an          %ar                    %s
 -------   ---------  ----------------   -----------------------
 c192eb1 - jorgebuxe, 84 minutos atrás : Alterando o arquivo.txt
 6b9bd6f - jorgebuxe, 2 horas atrás : Meu primeiro commit
@@ -150,17 +154,54 @@ c192eb1 - jorgebuxe, 84 minutos atrás : Alterando o arquivo.txt
 
 <p>Podemos ainda pegar o log dos commits feitos há dias atras, tanto como minutos, horas. Usando comando <em>$ git log - -sice=2.days</em> ou <em>$ git log - -since=120.minutes</em> que equivale a 2 horas.</p>
 
-<pre><code class="language-ruby">commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
-Author: jorgebuxe &lt;email@email.com&gt;
+<pre><code class="bash">
+commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe <email@email.com>
 Date:   Mon Mar 27 00:03:30 2017 -0300
 
     Alterando o arquivo.txt
 
 commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
-Author: jorgebuxe &lt;email@email.com&gt;
+Author: jorgebuxe <email@email.com>
 Date:   Sun Mar 26 23:57:28 2017 -0300
 
     Meu primeiro commit
+</code></pre>
+
+<pre><code class="ruby">
+# Output "Eu gosto de ruby"
+diz = "Eu gosto de Ruby"
+puts diz
+
+# Saída "EU *GOSTO* DE RUBY"
+diz['gosto'] = "*gosto*"
+puts diz.upcase
+
+# Output: "Eu *gosto*
+# de Ruby" 5 vezes
+5.times { puts diz }
+</code></pre>
+
+<pre><code class="javascript">
+// fittext.js plugin
+          (function($){
+            $.fn.fitText = function(kompressor, options){
+              var compressor = kompressor || 1,
+                  settings = $.extend({
+                    'minFontSize' : Number.NEGATIVE_INFINITY,
+                    'maxFontSize' : Number.POSITIVE_INFINITY
+                  }, options);
+            
+              return this.each(function(){
+                var $this = $(this);
+                var resizer = function () {
+                  $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+                };
+                resizer();
+                $(window).on('resize orientationchange', resizer);
+              });
+            };
+          })( jQuery ); 
 </code></pre>
 
 <h3 id="conclusão:a318d8452666fd7e352d1ffc18b687ee">Conclusão</h3>
