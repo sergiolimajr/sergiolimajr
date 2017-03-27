@@ -6,7 +6,109 @@
     <description>Recent content on Sérgio Júnior</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 27 Mar 2017 00:36:27 -0300</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Formas de verificar o log no Git</title>
+      <link>/article/verificando_log/</link>
+      <pubDate>Mon, 27 Mar 2017 00:36:27 -0300</pubDate>
+      
+      <guid>/article/verificando_log/</guid>
+      <description>
+
+&lt;p&gt;No dia a dia precisamos estar atentos ao commits feitos por nós mesmos e também pelos nossos colegas de trabalho.
+Isso ajuda muito no controle do que está sendo feito no projeto, então decidi fazer esse breve artigo sobre algumas formas legais de verificar o log no Git através do terminal utilizando &lt;em&gt;$ git log&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;utilizando-git-log:a318d8452666fd7e352d1ffc18b687ee&#34;&gt;Utilizando git log&lt;/h3&gt;
+
+&lt;p&gt;Com o &lt;em&gt;$ git log&lt;/em&gt;, podemos ver todos os commits feitos, sendo vistos em ordem descrescente, ou seja, do mais novo commit ao mais antigo.&lt;/p&gt;
+
+&lt;p&gt;Inicialmente, usando o comando &lt;em&gt;$ git log -p&lt;/em&gt;, vemos cada parte do commit, o que foi mudado, as diferenças entre um arquivo e outro. Basicamente esse comando mostra todos os commits e as alterações feitas neles.&lt;/p&gt;
+
+&lt;p&gt;Se quiséssemos ver algumas interações, poderíamos usar &lt;em&gt;$ git log -p -2&lt;/em&gt;, trazendo assim os dois ultimos commits, ou quantos você desejar.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;
+commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Date:   Mon Mar 27 00:03:30 2017 -0300
+
+    Alterando o arquivo.txt
+
+diff --git a/arquivo.txt b/arquivo.txt
+index 980a0d5..f534deb 100644
+--- a/arquivo.txt
++++ b/arquivo.txt
+@@ -1 +1 @@
+-Hello World!
++Hello World.
+
+commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
+Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Date:   Sun Mar 26 23:57:28 2017 -0300
+
+    Meu primeiro commit
+
+diff --git a/arquivo.txt b/arquivo.txt
+new file mode 100644
+index 0000000..980a0d5
+--- /dev/null
++++ b/arquivo.txt
+@@ -0,0 +1 @@
++Hello World!
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Outra coisa que você também pode fazer é usar o &lt;em&gt;$ git log - -stat&lt;/em&gt;. Esse comando mostra um resumo estatístico de todos os commits, dizendo quantas linhas foram alterados, quantas foram retiradas e quantas foram adicionadas, simples não é?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;
+commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Date:   Mon Mar 27 00:03:30 2017 -0300
+
+    Alterando o arquivo.txt
+
+ arquivo.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Já quando não queremos ver todo esse emaranhado de código, usamos o comando &lt;em&gt;$ git log - -pretty=oneline&lt;/em&gt;. Ele retornará tudo numa linha, porém, retirando alguns detalhes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;c192eb18ed3de7888de93bdde938e0bac1c7d55d Alterando o arquivo.txt
+6b9bd6ff28443c98e10f49191862811fce47ea8e Meu primeiro commit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Também existe uma outra opção do (- -pretty), que é o (- -pretty=format) seguido do formato que queremos. Usando o comando &lt;em&gt;$ git log - -pretty=format:&amp;ldquo;%h - %an, %ar : %s&amp;rdquo;&lt;/em&gt; ele traz os commits formatados como desejamos deixando tudo bem organizado pelo hash, quem commitou, há quanto tempo commitou, e qual é a descrição do commit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;   %h         %an          %ar                    %s
+-------   ---------  ----------------   -----------------------
+c192eb1 - jorgebuxe, 84 minutos atrás : Alterando o arquivo.txt
+6b9bd6f - jorgebuxe, 2 horas atrás : Meu primeiro commit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Podemos ainda pegar o log dos commits feitos há dias atras, tanto como minutos, horas. Usando comando &lt;em&gt;$ git log - -sice=2.days&lt;/em&gt; ou &lt;em&gt;$ git log - -since=120.minutes&lt;/em&gt; que equivale a 2 horas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Date:   Mon Mar 27 00:03:30 2017 -0300
+
+    Alterando o arquivo.txt
+
+commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
+Author: jorgebuxe &amp;lt;email@email.com&amp;gt;
+Date:   Sun Mar 26 23:57:28 2017 -0300
+
+    Meu primeiro commit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;conclusão:a318d8452666fd7e352d1ffc18b687ee&#34;&gt;Conclusão&lt;/h3&gt;
+
+&lt;p&gt;Então, essas foram algumas dicas de como verificar o log no git. Se não sabia, agora sabe. Compartilhe com seu colega, pratique, vá fundo no git pois não é difícil, e ajuda bastante no versionamento.&lt;/p&gt;
+
+&lt;p&gt;Espero que eu tenha sido claro, e que tenham gostado. Meu muito obrigado por terem chegado até aqui.&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
