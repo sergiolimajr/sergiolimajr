@@ -107,42 +107,6 @@ Date:   Sun Mar 26 23:57:28 2017 -0300
     Meu primeiro commit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&#34;ruby&#34;&gt;
-# Output &#34;Eu gosto de ruby&#34;
-diz = &#34;Eu gosto de Ruby&#34;
-puts diz
-
-# Saída &#34;EU *GOSTO* DE RUBY&#34;
-diz[&#39;gosto&#39;] = &#34;*gosto*&#34;
-puts diz.upcase
-
-# Output: &#34;Eu *gosto*
-# de Ruby&#34; 5 vezes
-5.times { puts diz }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;
-// fittext.js plugin
-          (function($){
-            $.fn.fitText = function(kompressor, options){
-              var compressor = kompressor || 1,
-                  settings = $.extend({
-                    &#39;minFontSize&#39; : Number.NEGATIVE_INFINITY,
-                    &#39;maxFontSize&#39; : Number.POSITIVE_INFINITY
-                  }, options);
-            
-              return this.each(function(){
-                var $this = $(this);
-                var resizer = function () {
-                  $this.css(&#39;font-size&#39;, Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-                };
-                resizer();
-                $(window).on(&#39;resize orientationchange&#39;, resizer);
-              });
-            };
-          })( jQuery ); 
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;conclusão:a318d8452666fd7e352d1ffc18b687ee&#34;&gt;Conclusão&lt;/h3&gt;
 
 &lt;p&gt;Então, essas foram algumas dicas de como verificar o log no git. Se não sabia, agora sabe. Compartilhe com seu colega, pratique, vá fundo no git pois não é difícil, e ajuda bastante no versionamento.&lt;/p&gt;
