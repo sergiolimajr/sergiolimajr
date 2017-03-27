@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/sergiolimaj">
+        <meta name="twitter:creator" content="@https://twitter.com/sergiolimaj">
+        <meta name="twitter:domain" content="/">
+	
+        <meta property="og:site_name" content="Sérgio Júnior">
+        <meta property="og:title" content="Sérgio Júnior">
+        <meta property="og:url" content="/article/verificando_log/">
+        <meta property="og:description" content="">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="" />
+        <meta property="og:article:published_time" content="2017-03-27T00:36:27-03:00" />
+    
+        <meta name="generator" content="Hugo 0.16-DEV" />
+        <title>Formas de verificar o log no Git &middot; Sérgio Júnior</title>
+        <link rel="canonical" href="/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+        <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+<header id="site-header" class="header-article">
+    <div class="nav-bar">
+        <a class="logo" href="/" alt="Sérgio Júnior">SJ</a>
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    
+                    
+                    <a class="sidebar-nav-item" href="/">Home</a>
+                    
+                    <a class="sidebar-nav-item" href="/article/">Articles</a>
+                    
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="container">
+            <header class="post-header">
+                <h3 class="blog-title heading">Formas de verificar o log no Git</h3>
+            </header>
+        <p class="blog-description"></p>
+        <div class="post-image" style="background-image: url('/img/man-working-on-laptop-with-coffee-mug-in-background.jpg');"></div>
+    </div>
+</header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="article">
+    <section class="post-content">
+        
+
+<p>No dia a dia precisamos estar atentos ao commits feitos por nós mesmos e também pelos nossos colegas de trabalho.
+Isso ajuda muito no controle do que está sendo feito no projeto, então decidi fazer esse breve artigo sobre algumas formas legais de verificar o log no Git através do terminal utilizando <em>$ git log</em>.</p>
+
+<h3 id="utilizando-git-log:a318d8452666fd7e352d1ffc18b687ee">Utilizando git log</h3>
+
+<p>Com o <em>$ git log</em>, podemos ver todos os commits feitos, sendo vistos em ordem descrescente, ou seja, do mais novo commit ao mais antigo.</p>
+
+<p>Inicialmente, usando o comando <em>$ git log -p</em>, vemos cada parte do commit, o que foi mudado, as diferenças entre um arquivo e outro. Basicamente esse comando mostra todos os commits e as alterações feitas neles.</p>
+
+<p>Se quiséssemos ver algumas interações, poderíamos usar <em>$ git log -p -2</em>, trazendo assim os dois ultimos commits, ou quantos você desejar.</p>
+
+<pre><code class="language-ruby">
+commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe &lt;email@email.com&gt;
+Date:   Mon Mar 27 00:03:30 2017 -0300
+
+    Alterando o arquivo.txt
+
+diff --git a/arquivo.txt b/arquivo.txt
+index 980a0d5..f534deb 100644
+--- a/arquivo.txt
++++ b/arquivo.txt
+@@ -1 +1 @@
+-Hello World!
++Hello World.
+
+commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
+Author: jorgebuxe &lt;email@email.com&gt;
+Date:   Sun Mar 26 23:57:28 2017 -0300
+
+    Meu primeiro commit
+
+diff --git a/arquivo.txt b/arquivo.txt
+new file mode 100644
+index 0000000..980a0d5
+--- /dev/null
++++ b/arquivo.txt
+@@ -0,0 +1 @@
++Hello World!
+
+</code></pre>
+
+<p>Outra coisa que você também pode fazer é usar o <em>$ git log - -stat</em>. Esse comando mostra um resumo estatístico de todos os commits, dizendo quantas linhas foram alterados, quantas foram retiradas e quantas foram adicionadas, simples não é?</p>
+
+<pre><code class="language-ruby">
+commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe &lt;email@email.com&gt;
+Date:   Mon Mar 27 00:03:30 2017 -0300
+
+    Alterando o arquivo.txt
+
+ arquivo.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+</code></pre>
+
+<p>Já quando não queremos ver todo esse emaranhado de código, usamos o comando <em>$ git log - -pretty=oneline</em>. Ele retornará tudo numa linha, porém, retirando alguns detalhes.</p>
+
+<pre><code class="language-ruby">c192eb18ed3de7888de93bdde938e0bac1c7d55d Alterando o arquivo.txt
+6b9bd6ff28443c98e10f49191862811fce47ea8e Meu primeiro commit
+</code></pre>
+
+<p>Também existe uma outra opção do (- -pretty), que é o (- -pretty=format) seguido do formato que queremos. Usando o comando <em>$ git log - -pretty=format:&ldquo;%h - %an, %ar : %s&rdquo;</em> ele traz os commits formatados como desejamos deixando tudo bem organizado pelo hash, quem commitou, há quanto tempo commitou, e qual é a descrição do commit.</p>
+
+<pre><code class="language-ruby">   %h         %an          %ar                    %s
+-------   ---------  ----------------   -----------------------
+c192eb1 - jorgebuxe, 84 minutos atrás : Alterando o arquivo.txt
+6b9bd6f - jorgebuxe, 2 horas atrás : Meu primeiro commit
+</code></pre>
+
+<p>Podemos ainda pegar o log dos commits feitos há dias atras, tanto como minutos, horas. Usando comando <em>$ git log - -sice=2.days</em> ou <em>$ git log - -since=120.minutes</em> que equivale a 2 horas.</p>
+
+<pre><code class="language-ruby">commit c192eb18ed3de7888de93bdde938e0bac1c7d55d
+Author: jorgebuxe &lt;email@email.com&gt;
+Date:   Mon Mar 27 00:03:30 2017 -0300
+
+    Alterando o arquivo.txt
+
+commit 6b9bd6ff28443c98e10f49191862811fce47ea8e
+Author: jorgebuxe &lt;email@email.com&gt;
+Date:   Sun Mar 26 23:57:28 2017 -0300
+
+    Meu primeiro commit
+</code></pre>
+
+<h3 id="conclusão:a318d8452666fd7e352d1ffc18b687ee">Conclusão</h3>
+
+<p>Então, essas foram algumas dicas de como verificar o log no git. Se não sabia, agora sabe. Compartilhe com seu colega, pratique, vá fundo no git pois não é difícil, e ajuda bastante no versionamento.</p>
+
+<p>Espero que eu tenha sido claro, e que tenham gostado. Meu muito obrigado por terem chegado até aqui.</p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            
+            <p class="f-post-time"><time datetime="2017-03-27T00:36:27-03:00">Mar 27, 2017</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Formas%20de%20verificar%20o%20log%20no%20Git&url=%2farticle%2fverificando_log%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2farticle%2fverificando_log%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=%2farticle%2fverificando_log%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+	
+	    <footer id="site-footer">
+        <div class="container">
+          
+          
+            <a href="https://www.twitter.com/sergiolimaj" title="Twitter" target="_blank">
+              <span class="tooltip">
+                <i class="fa fa-twitter"></i>
+              </span>
+            </a>
+          
+          
+          
+            <a href="https://www.github.com/sergiolimajr" title="GitHub" target="_blank">
+              <span class="tooltip">
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+          
+          <a href="/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+
+</main>
+
+    <script>
+        var _gaq=[['_setAccount','UA-93918456-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+
+</body>
+</html>
