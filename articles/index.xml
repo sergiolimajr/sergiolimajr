@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articles on Sérgio Júnior</title>
-    <link>http://sergiojr.com.br/articles/</link>
+    <link>/articles/</link>
     <description>Recent content in Articles on Sérgio Júnior</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Mar 2017 23:43:01 -0300</lastBuildDate>
     
-	<atom:link href="http://sergiojr.com.br/articles/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/articles/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Formas de verificar o log no Git</title>
-      <link>http://sergiojr.com.br/articles/formas-de-verificar-o-log-no-git/</link>
+      <link>/articles/formas-de-verificar-o-log-no-git/</link>
       <pubDate>Mon, 27 Mar 2017 23:43:01 -0300</pubDate>
       
-      <guid>http://sergiojr.com.br/articles/formas-de-verificar-o-log-no-git/</guid>
+      <guid>/articles/formas-de-verificar-o-log-no-git/</guid>
       <description>No dia a dia precisamos estar atentos ao commits feitos por nós mesmos e também pelos nossos colegas de trabalho. Isso ajuda muito no controle do que está sendo feito no projeto, então decidi fazer esse breve artigo sobre algumas formas legais de verificar o log no Git através do terminal utilizando $ git log.
 Utilizando git log Com o $ git log, podemos ver todos os commits feitos, sendo vistos em ordem descrescente, ou seja, do mais novo commit ao mais antigo.</description>
     </item>

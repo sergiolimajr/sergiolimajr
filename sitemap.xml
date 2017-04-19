@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sergiojr.com.br/articles/formas-de-verificar-o-log-no-git/</loc>
+    <loc>/articles/formas-de-verificar-o-log-no-git/</loc>
     <lastmod>2017-03-27T23:43:01-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sergiojr.com.br/articles/</loc>
-    <lastmod>2017-03-27T23:43:01-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sergiojr.com.br/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sergiojr.com.br/</loc>
+    <loc>/articles/</loc>
     <lastmod>2017-03-27T23:43:01-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sergiojr.com.br/tags/</loc>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-03-27T23:43:01-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
