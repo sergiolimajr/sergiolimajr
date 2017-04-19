@@ -1045,9 +1045,9 @@ article.li {
     clear: both;
 }
 
-.recent-post h3 {
+/*.recent-post h3 {
     float: left;
-}
+}*/
 
 @media (max-width: 650px) {
     .recent-post p {
@@ -1079,6 +1079,7 @@ article.li {
 .post-time {
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin-left: 15px;
     margin-bottom: 30px;
     font-size: 70%;
 }
