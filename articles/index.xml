@@ -21,5 +21,27 @@
 Utilizando git log Com o $ git log, podemos ver todos os commits feitos, sendo vistos em ordem descrescente, ou seja, do mais novo commit ao mais antigo.</description>
     </item>
     
+    <item>
+      <title>Criando um menu redimensionável</title>
+      <link>/articles/criando-menu-redimensionavel/</link>
+      <pubDate>Sun, 01 Feb 2015 12:00:01 -0300</pubDate>
+      
+      <guid>/articles/criando-menu-redimensionavel/</guid>
+      <description>Estive lendo alguns posts bem antigos do blog Web Design Depot e encontrei o post How to create a resizing menu bar, que é basicamente como criar uma barra de menu redimesionável. A partir disso resolvi refazer o código e trazer para você.
+Caso queira dar uma olhada na demo ou repositório no GitHub.
+Criando a estrutura do HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;pt-BR&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt; Como criar uma barra de menu redimensionável &amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;assets/css/style.</description>
+    </item>
+    
+    <item>
+      <title>Aprendendo sobre como aprender</title>
+      <link>/articles/aprendendo-sobre-aprender/</link>
+      <pubDate>Tue, 27 Jan 2015 12:00:01 -0300</pubDate>
+      
+      <guid>/articles/aprendendo-sobre-aprender/</guid>
+      <description>Programar pode ser difícil para muitas pessoas que decidem se aventurar no mundo do desenvolvimento por si só.
+Mas por quê programar se torna tão difícil quando o assunto é ser autodidata?
+Para muitos, aprender a programar é difícil. Mas não é bicho de Sete Cabeças como falam ou até pensam. Devemos nos conscientizar que algo só se torna difícil quando colocamos a carroça na frente do burro, ou seja:</description>
+    </item>
+    
   </channel>
 </rss>
