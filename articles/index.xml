@@ -17,8 +17,17 @@
       <pubDate>Mon, 27 Mar 2017 23:43:01 -0300</pubDate>
       
       <guid>/articles/formas-de-verificar-o-log-no-git/</guid>
-      <description>No dia a dia precisamos estar atentos ao commits feitos por nós mesmos e também pelos nossos colegas de trabalho. Isso ajuda muito no controle do que está sendo feito no projeto, então decidi fazer esse breve artigo sobre algumas formas legais de verificar o log no Git através do terminal utilizando $ git log.
-Utilizando git log Com o $ git log, podemos ver todos os commits feitos, sendo vistos em ordem descrescente, ou seja, do mais novo commit ao mais antigo.</description>
+      <description>&lt;p&gt;No dia a dia precisamos estar atentos ao commits feitos por nós mesmos e também pelos nossos colegas de trabalho. Isso ajuda muito no controle do que está sendo feito no projeto, então decidi fazer esse breve artigo sobre algumas formas legais de verificar o log no Git através do terminal utilizando $ git log.&lt;/p&gt;
+
+&lt;h3 id=&#34;utilizando-git-log&#34;&gt;Utilizando git log&lt;/h3&gt;
+
+&lt;p&gt;Com o $ git log, podemos ver todos os commits feitos, sendo vistos em ordem descrescente, ou seja, do mais novo commit ao mais antigo.&lt;/p&gt;
+
+&lt;p&gt;Inicialmente, usando o comando $ git log -p, vemos cada parte do commit, o que foi mudado, as diferenças entre um arquivo e outro. Basicamente esse comando mostra todos os commits e as alterações feitas neles.&lt;/p&gt;
+
+&lt;p&gt;Se quiséssemos ver algumas interações, poderíamos usar $ git log -p -2, trazendo assim os dois ultimos commits, ou quantos você desejar.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,9 +36,11 @@ Utilizando git log Com o $ git log, podemos ver todos os commits feitos, sendo v
       <pubDate>Sun, 01 Feb 2015 12:00:01 -0300</pubDate>
       
       <guid>/articles/criando-menu-redimensionavel/</guid>
-      <description>Estive lendo alguns posts bem antigos do blog Web Design Depot e encontrei o post How to create a resizing menu bar, que é basicamente como criar uma barra de menu redimesionável. A partir disso resolvi refazer o código e trazer para você.
-Caso queira dar uma olhada na demo ou repositório no GitHub.
-Criando a estrutura do HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;pt-BR&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt; Como criar uma barra de menu redimensionável &amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;assets/css/style.</description>
+      <description>&lt;p&gt;Estive lendo alguns posts bem antigos do blog &lt;a href=&#34;http://www.webdesignerdepot.com/&#34;&gt;Web Design Depot&lt;/a&gt; e encontrei o post &lt;a href=&#34;http://www.webdesignerdepot.com/2013/03/how-to-create-a-resizing-menu-bar/&#34;&gt;How to create a resizing menu bar&lt;/a&gt;, que é basicamente como criar uma barra de menu redimesionável. A partir disso resolvi refazer o código e trazer para você.&lt;/p&gt;
+
+&lt;p&gt;Caso queira dar uma olhada na &lt;a href=&#34;http://sergiolimajr.github.io/menu-resizing/&#34;&gt;demo&lt;/a&gt; ou &lt;a href=&#34;https://github.com/sergiolimajr/menu-resizing&#34;&gt;repositório no GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,9 +49,11 @@ Criando a estrutura do HTML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp
       <pubDate>Tue, 27 Jan 2015 12:00:01 -0300</pubDate>
       
       <guid>/articles/aprendendo-sobre-aprender/</guid>
-      <description>Programar pode ser difícil para muitas pessoas que decidem se aventurar no mundo do desenvolvimento por si só.
-Mas por quê programar se torna tão difícil quando o assunto é ser autodidata?
-Para muitos, aprender a programar é difícil. Mas não é bicho de Sete Cabeças como falam ou até pensam. Devemos nos conscientizar que algo só se torna difícil quando colocamos a carroça na frente do burro, ou seja:</description>
+      <description>&lt;p&gt;Programar pode ser difícil para muitas pessoas que decidem se aventurar no mundo do desenvolvimento por si só.&lt;/p&gt;
+
+&lt;p&gt;Mas por quê programar se torna tão difícil quando o assunto é ser autodidata?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
