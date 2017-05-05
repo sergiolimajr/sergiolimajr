@@ -19,14 +19,6 @@
       <guid>/articles/formas-de-verificar-o-log-no-git/</guid>
       <description>&lt;p&gt;No dia a dia precisamos estar atentos ao commits feitos por nós mesmos e também pelos nossos colegas de trabalho. Isso ajuda muito no controle do que está sendo feito no projeto, então decidi fazer esse breve artigo sobre algumas formas legais de verificar o log no Git através do terminal utilizando $ git log.&lt;/p&gt;
 
-&lt;h3 id=&#34;utilizando-git-log&#34;&gt;Utilizando git log&lt;/h3&gt;
-
-&lt;p&gt;Com o $ git log, podemos ver todos os commits feitos, sendo vistos em ordem descrescente, ou seja, do mais novo commit ao mais antigo.&lt;/p&gt;
-
-&lt;p&gt;Inicialmente, usando o comando $ git log -p, vemos cada parte do commit, o que foi mudado, as diferenças entre um arquivo e outro. Basicamente esse comando mostra todos os commits e as alterações feitas neles.&lt;/p&gt;
-
-&lt;p&gt;Se quiséssemos ver algumas interações, poderíamos usar $ git log -p -2, trazendo assim os dois ultimos commits, ou quantos você desejar.&lt;/p&gt;
-
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
